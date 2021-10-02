@@ -1,3 +1,5 @@
+import math as m
+
 def add (x, y):
     return x + y
 
@@ -9,6 +11,12 @@ def multiply(x, y):
 	
 def divison (x, y):
 	return x / y
+
+def log(x, y):
+    log = m.log(x) + m.log(y)
+    antilog = 10**log
+    return antilog
+
 	
 while True:
 
@@ -38,7 +46,7 @@ while True:
 
     choice = input("pls select operatio:  ")
 
-    if choice in ('1','2','3','4'):
+    if choice in ('1','2','3','4','5'):
 
 
         if choice == '1':
@@ -52,6 +60,9 @@ while True:
         
         elif choice =='4':
         	print(divison(x , y))
+        
+        elif choice =='5':
+            print(log(x , y))
 
         break
 
